@@ -1,6 +1,6 @@
 //
 //  SafariWebExtensionHandler.swift
-//  Shared (Extension)
+//  unit-converter Extension
 //
 //  Created by Adam Ash on 12/15/21.
 //
@@ -12,7 +12,7 @@ let SFExtensionMessageKey = "message"
 
 class SafariWebExtensionHandler: NSObject, NSExtensionRequestHandling {
 
-    func beginRequest(with context: NSExtensionContext) {
+	func beginRequest(with context: NSExtensionContext) {
         let item = context.inputItems[0] as! NSExtensionItem
         let message = item.userInfo?[SFExtensionMessageKey]
         os_log(.default, "Received message from browser.runtime.sendNativeMessage: %@", message as! CVarArg)
@@ -22,5 +22,5 @@ class SafariWebExtensionHandler: NSObject, NSExtensionRequestHandling {
 
         context.completeRequest(returningItems: [response], completionHandler: nil)
     }
-
+    
 }

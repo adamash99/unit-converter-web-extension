@@ -1,6 +1,6 @@
 //
 //  AppDelegate.swift
-//  macOS (App)
+//  unit-converter
 //
 //  Created by Adam Ash on 12/15/21.
 //

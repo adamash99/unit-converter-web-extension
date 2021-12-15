@@ -1,6 +1,4 @@
-function show(platform, enabled) {
-    document.body.classList.add(`platform-${platform}`);
-
+function show(enabled) {
     if (typeof enabled === "boolean") {
         document.body.classList.toggle(`state-on`, enabled);
         document.body.classList.toggle(`state-off`, !enabled);
